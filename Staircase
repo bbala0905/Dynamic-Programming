@@ -1,0 +1,16 @@
+# n steps to reach the top. Can climb 1 or 2 steps at a time(k=2). 
+# What is number of distinct ways to get to the top?
+
+# Objective Function: number of distinct ways to get to the ith stair
+# Base cases: f(0)=1, f(1)=1, f(2)=2
+# Recursive relation: f(n) = f(n-1) + f(n-2)
+# Bottom-up
+# Answer will be in the last element
+    
+def Staircase(n):
+    dp = [1, 1]    
+    
+    for i in range(2, n+1):
+        dp.append(dp[i-1] + dp[i-2])
+        
+    return dp[-1]
