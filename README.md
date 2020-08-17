@@ -1,1 +1,1 @@
-# Dynamic-Programming
+Solutions to dynamic programmic problems
